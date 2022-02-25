@@ -55,5 +55,60 @@ const user: User = {
   id: 1,
   name: "String",
 };
-
+// Type
+type Point = number | string;
+const p1: Point = 23;
+// console.log(p1);
 // console.log(user);
+
+// Type Assertion
+let cid: any = 1;
+// let customerId  = <number>cid;
+// or
+let customerId = cid as number;
+
+// Function
+
+function addNumber(x: number, y: number): number {
+  return x + y;
+}
+
+// console.log(addNumber(1, 2));
+
+// console.log(addNumbers(1,2));
+// does not allow hoisting
+const addNumbers = (x: number, y: number): number => x + y;
+// console.log(addNumbers(20, 30));
+
+function message(msg: string | boolean | number): void {
+  console.log(msg);
+}
+
+// message(true);
+
+interface User123 {
+  readonly id: string;
+  age: number;
+  name: string;
+  place: string;
+  Working?: boolean;
+}
+// Working? means it can be optional
+//! readonly id: string; this means you cnt assign value for this id
+
+const user123: User123 = {
+  id: "12345",
+  age: 26,
+  name: "Angkit Hashamsa",
+  place: "delhi",
+};
+user123["Working"] = true;
+//! user123.id = "273437373"; you cant assign value for id
+// console.log(user123);
+
+interface MathFunc {
+  (x: number, y: number): number;
+}
+const addNum: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
+// console.log(addNum(1, 3));

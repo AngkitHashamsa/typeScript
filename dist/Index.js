@@ -34,4 +34,35 @@ const user = {
     id: 1,
     name: "String",
 };
+const p1 = 23;
+// console.log(p1);
 // console.log(user);
+// Type Assertion
+let cid = 1;
+// let customerId  = <number>cid;
+// or
+let customerId = cid;
+// Function
+function addNumber(x, y) {
+    return x + y;
+}
+// console.log(addNumber(1, 2));
+// console.log(addNumbers(1,2));
+// does not allow hoisting
+const addNumbers = (x, y) => x + y;
+// console.log(addNumbers(20, 30));
+function message(msg) {
+    console.log(msg);
+}
+// Working? means it can be optional
+//! readonly id: string; this means you cnt assign value for this id
+const user123 = {
+    id: "12345",
+    age: 26,
+    name: "Angkit Hashamsa",
+    place: "delhi",
+};
+user123["Working"] = true;
+const addNum = (x, y) => x + y;
+const sub = (x, y) => x - y;
+// console.log(addNum(1, 3));
